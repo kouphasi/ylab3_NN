@@ -10,8 +10,8 @@ import scipy.stats
 
 class MakeData:
     def __init__(self):
-        lifex = pd.read_csv("./Life expectancy.csv")
-        suicide_rate = pd.read_csv("./Suicide Rate.csv")
+        lifex = pd.read_csv("../Life expectancy.csv")
+        suicide_rate = pd.read_csv("../Suicide Rate.csv")
 
 
         df = pd.merge(lifex,suicide_rate)
@@ -27,10 +27,10 @@ class MakeData:
         # output_array = preprocessing.MinMaxScaler().fit_transform(output_array)*0.999999999
 
 
-        self.input_learn = input_array[:110]
-        self.output_learn = output_array[:110]
-        self.input_test = input_array[110:]
-        self.output_test = output_array[110:]
+        self.input_learn = input_array[:90]
+        self.output_learn = output_array[:90]
+        self.input_test = input_array[90:]
+        self.output_test = output_array[90:]
 
 
 

@@ -15,8 +15,12 @@ class neuralNetwork:
         self.lr = learningrate
 
         #活性化関数（シグモイド関数）
-        import scipy.special
-        self.activation_function = lambda x: scipy.special.expit(x)
+        # import scipy.special
+        # self.activation_function = lambda x: scipy.special.expit(x)
+
+        # 活性化関数ReLU関数
+        self.activation_function = lambda x: x * (x > 0.0) * 0.5
+
         pass
 
     def train(self, inputs_list, targets_list):#学習陽の関数
