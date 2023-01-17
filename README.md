@@ -9,6 +9,7 @@
 基本的にデータの分析は、first_commit 直下の`main.ipynb`内に記述しています
 
 隠れ層のノード数をいじったりしてグラフ出力しているものは first_commit 内の`many_hiddens.ipynb`内に記述しています
+学習率いじったりしてグラフ出力しているものは first_commit 内の`chnage_rates.ipynb`内に記述しています
 
 `first_commit/execute_function.py`の中には様々な隠れ層のノード数で学習させられるように関数を定義しています
 
