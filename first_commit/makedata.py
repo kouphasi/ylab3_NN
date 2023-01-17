@@ -18,19 +18,23 @@ class MakeData:
 
 
         input_array = df.iloc[:,1:6].values
-
+        output_array = df.iloc[:,7].values.reshape((-1, 1))
 
         # input_array = preprocessing.MinMaxScaler().fit_transform(input_array)*0.999999999
         input_array = scipy.stats.zscore(input_array)
 
-        output_array = df.iloc[:,7].values.reshape((-1, 1))
+        # output_array = scipy.stats.zscore(df.iloc[:,6].values.reshape((-1, 1)))
         # output_array = preprocessing.MinMaxScaler().fit_transform(output_array)*0.999999999
 
+        #シャッフルする
+        np.random.shuffle(input_array)
+        np.random.shuffle(output_array)
+        # print(input_array)
 
-        self.input_learn = input_array[:90]
-        self.output_learn = output_array[:90]
-        self.input_test = input_array[90:]
-        self.output_test = output_array[90:]
+        self.input_learn = input_array[:80]
+        self.output_learn = output_array[:80]
+        self.input_test = input_array[80:]
+        self.output_test = output_array[80:]
 
 
 
